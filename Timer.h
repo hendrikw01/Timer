@@ -55,6 +55,7 @@ public:
    */
   int8_t pulseImmediate(uint8_t pin, unsigned long period, uint8_t pulseValue);
   void stop(int8_t id);
+  void updatePeriod(int8_t id, unsigned long period);
   void update(void);
 
 protected:

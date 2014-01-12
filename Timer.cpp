@@ -101,6 +101,12 @@ int8_t Timer::pulseImmediate(uint8_t pin, unsigned long period, uint8_t pulseVal
 	return id;
 }
 
+void Timer::updatePeriod(int8_t id, unsigned long period)
+{
+	if (id >= 0 && id < MAX_NUMBER_OF_EVENTS) {
+		_events[id].period = period;
+	}
+}
 
 void Timer::stop(int8_t id)
 {
